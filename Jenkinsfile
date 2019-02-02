@@ -56,6 +56,5 @@ podTemplate(
                 sh "/helm upgrade --install --wait --set image.repository=${repository},image.tag=${commitId} hello hello --tls"
             }
         }
- */
     }
 }
