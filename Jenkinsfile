@@ -34,6 +34,7 @@ podTemplate(
             checkout scm
             commitId = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
         }
+/*
         stage ('Build') {
             container ('golang') {
                 sh 'CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .'
@@ -54,5 +55,6 @@ podTemplate(
                 sh "/helm upgrade --install --wait --set image.repository=${repository},image.tag=${commitId} hello hello --tls"
             }
         }
+ */
     }
 }
